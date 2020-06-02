@@ -16,9 +16,22 @@ public class ConsoleExercises {
 //        String userInput3 = sc.next();
 //        System.out.printf("%s%n%s%n%s",userInput1, userInput2, userInput3);
 
-        System.out.println("Enter a sentence:");
-        String userInput = sc.nextLine();
-        System.out.println(userInput);
+//        System.out.println("Enter a sentence:");
+//        String userInput = sc.nextLine();
+//        System.out.println(userInput);
+
+        System.out.println("Enter the width of a Codeup classroom:");
+        String width = sc.nextLine();
+        System.out.println("Enter the length:");
+        String length = sc.nextLine();
+        System.out.println("How tall is the ceiling?");
+        String height = sc.nextLine();
+//        String userInput = sc.nextLine();
+//        System.out.println(userInput);
+        double areaWidth = Double.parseDouble(width);
+        double areaLength = Double.parseDouble(length);
+        double areaHeight = Double.parseDouble(height);
+        System.out.println("The area of the classroom is: " + areaWidth * areaLength + ". The volume of the room is: " + ((areaWidth * areaLength) * areaHeight) + ".");
 
     }
 }
