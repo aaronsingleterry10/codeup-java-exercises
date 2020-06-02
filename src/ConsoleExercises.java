@@ -10,11 +10,15 @@ public class ConsoleExercises {
 //        int userInput = sc.nextInt();
 //        System.out.println(userInput);
 
-        System.out.println("Enter three different words:");
-        String userInput1 = sc.next();
-        String userInput2 = sc.next();
-        String userInput3 = sc.next();
-        System.out.printf("%s%n%s%n%s",userInput1, userInput2, userInput3);
+//        System.out.println("Enter three different words:");
+//        String userInput1 = sc.next();
+//        String userInput2 = sc.next();
+//        String userInput3 = sc.next();
+//        System.out.printf("%s%n%s%n%s",userInput1, userInput2, userInput3);
+
+        System.out.println("Enter a sentence:");
+        String userInput = sc.nextLine();
+        System.out.println(userInput);
 
     }
 }
