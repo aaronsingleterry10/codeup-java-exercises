@@ -6,8 +6,5 @@ public class StringExercise {
 //        System.out.println(text.replace("random text", "Check \"this\" out!, \"s inside of \"s!"));
 //        System.out.println(text.replace("random text", "In windows, the main drive is usually C:\\"));
 //        System.out.println(text.replace("random text", "I can do backslashes \\, double backslashes \\\\, and the amazing triple backslashes \\\\\\"));
-
-
-
     }
 }
