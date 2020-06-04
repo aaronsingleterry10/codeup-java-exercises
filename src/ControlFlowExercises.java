@@ -49,19 +49,19 @@ public class ControlFlowExercises {
 //        }
         Scanner sc = new Scanner(System.in);
 
-//        System.out.println("Enter a number:");
-//        int userInput = sc.nextInt();
-//        System.out.println("Here is your table:");
-//        System.out.println("number | squared | cubed");
-//        System.out.println("------ | ------- | -----");
-//        for (int i = 1; i <= userInput; i++) {
-//            if (i * i < 10) {
-//                System.out.println(i + "      | " + (i * i) + "       | " + (i * i * i));
-//            } else {
-//                System.out.println(i + "      | " + (i * i) + "      | " + (i * i * i));
-//            }
-//        }
-//        sc.nextLine();
+        System.out.println("Enter a number:");
+        int userInput = sc.nextInt();
+        System.out.println("Here is your table:");
+        System.out.println("number | squared | cubed");
+        System.out.println("------ | ------- | -----");
+        for (int i = 1; i <= userInput; i++) {
+            if (i * i < 10) {
+                System.out.println(i + "      | " + (i * i) + "       | " + (i * i * i));
+            } else {
+                System.out.println(i + "      | " + (i * i) + "      | " + (i * i * i));
+            }
+        }
+        sc.nextLine();
         System.out.println("Would you like to continue? yes/no");
         String response;
         int grade;
@@ -102,13 +102,5 @@ public class ControlFlowExercises {
                 System.out.println("Would you like to continue? yes/no");
             }
         }
-
-//        if (response.equals("no")) {
-//            System.out.println("Have a good day!");
-//        } else if (response.equals("yes")) {
-//            System.out.println("Let's continue!");
-//        } else {
-//            System.out.println("Invalid response");
-//        }
     }
 }
