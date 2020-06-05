@@ -62,5 +62,10 @@ public class LoopsAndConditionalsBonuses {
 //- track the number of guesses by player 2
 //- display to the user the partially completed word
 //- string methods from the lesson will be helpful for this bonus
+		System.out.println("Time for some hangman!");
+		System.out.println("Enter a word Player 1");
+		String word = sc.nextLine();
+		int guesses = 10;
+
 	}
 }
