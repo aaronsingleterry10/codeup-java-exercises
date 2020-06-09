@@ -3,21 +3,22 @@ package oopLecture;
 public class Person {
 
 //        // SLIDE 3
-        public String firstName;
-        public String lastName;
-        public int age;
+//        public String firstName;
+//        public String lastName;
+//        public int age;
 
 
     // SLIDE 4
 
-//        // instance variables
-//        public String firstName;
-//        public String lastName;
-//
+    //        // instance variables
+    public String firstName;
+    public String lastName;
+
+    //
 //        // instance method
-//        public String sayHello() {
-//                return lastName + ", " + firstName + " says hi!";
-//        }
+    public String sayHello() {
+        return lastName + ", " + firstName + " says hi!";
+    }
 
 
     // SLIDE 7

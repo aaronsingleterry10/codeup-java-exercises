@@ -6,48 +6,48 @@ public class OopLecture {
 
         // ======================== slide 3 (classes and objects)
 //
-        Person rick = new Person();
-        rick.firstName = "Rick";
-        rick.lastName = "Sanchez";
-        rick.age = 23;
-        System.out.println(rick.firstName);
-        System.out.println(rick.lastName);
-        System.out.println(rick.age);
+//        Person rick = new Person();
+//        rick.firstName = "Rick";
+//        rick.lastName = "Sanchez";
+//        rick.age = 23;
+//        System.out.println(rick.firstName);
+//        System.out.println(rick.lastName);
+//        System.out.println(rick.age);
 
-        Person fred = new Person();
-        fred.firstName = "Fred";
-        fred.lastName = "Smith";
-        System.out.println(fred.firstName);
-        System.out.println(fred.lastName);
+//        Person fred = new Person();
+//        fred.firstName = "Fred";
+//        fred.lastName = "Smith";
+//        System.out.println(fred.firstName);
+//        System.out.println(fred.lastName);
 
 
         // -- Dog Example --
 
 
-        Dog d1 = new Dog();
-
-        d1.age = 3;
-        d1.breed = "corgi";
-        d1.canBreed = false;
-        d1.name = "Tater";
-        System.out.println(d1.breed);
+//        Dog d1 = new Dog();
+//
+//        d1.age = 3;
+//        d1.breed = "corgi";
+//        d1.canBreed = false;
+//        d1.name = "Tater";
+//        System.out.println(d1.breed);
 
         // ======================== slide 4 (object fields)
 
-//            Person rick = new Person();
-//            rick.firstName = "Rick";
-//            rick.lastName = "Sanchez";
-//            System.out.println(rick.sayHello());
+//        Person rick = new Person();
+//        rick.firstName = "Rick";
+//        rick.lastName = "Sanchez";
+//        System.out.println(rick.sayHello());
 
         // -- Dog Method Example --
 
-//            Dog d1 = new Dog();
-//            d1.age = 3;
-//            d1.breed = "corgi";
-//            d1.canBreed = false;
-//            d1.name = "Tater";
-//
-//            d1.callForDog("Tater");
+            Dog d1 = new Dog();
+            d1.age = 3;
+            d1.breed = "corgi";
+            d1.canBreed = false;
+            d1.name = "Tater";
+
+            d1.callForDog("Tater");
 
 
         // ======================== slide 5 (class fields)
