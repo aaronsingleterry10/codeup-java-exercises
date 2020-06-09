@@ -13,24 +13,24 @@ public class OopLecture {
         System.out.println(rick.firstName);
         System.out.println(rick.lastName);
         System.out.println(rick.age);
-//
-//            Person fred = new Person();
-//            fred.firstName = "Fred";
-//            fred.lastName = "Smith";
-//            System.out.println(fred.firstName);
-//            System.out.println(fred.lastName);
+
+        Person fred = new Person();
+        fred.firstName = "Fred";
+        fred.lastName = "Smith";
+        System.out.println(fred.firstName);
+        System.out.println(fred.lastName);
 
 
         // -- Dog Example --
 
 
-//            Dog d1 = new Dog();
-//
-//            d1.age = 3;
-//            d1.breed = "corgi";
-//            d1.canBreed = false;
-//            d1.name = "Tater";
+        Dog d1 = new Dog();
 
+        d1.age = 3;
+        d1.breed = "corgi";
+        d1.canBreed = false;
+        d1.name = "Tater";
+        System.out.println(d1.breed);
 
         // ======================== slide 4 (object fields)
 
