@@ -41,13 +41,13 @@ public class OopLecture {
 
         // -- Dog Method Example --
 
-            Dog d1 = new Dog();
-            d1.age = 3;
-            d1.breed = "corgi";
-            d1.canBreed = false;
-            d1.name = "Tater";
-
-            d1.callForDog("Tater");
+//            Dog d1 = new Dog();
+//            d1.age = 3;
+//            d1.breed = "corgi";
+//            d1.canBreed = false;
+//            d1.name = "Tater";
+//
+//            d1.callForDog("Tater");
 
 
         // ======================== slide 5 (class fields)
