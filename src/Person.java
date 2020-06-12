@@ -1,5 +1,6 @@
 public class Person {
     private String name = "Aaron";
+
     public String getName() {
         return name;
     }
@@ -19,7 +20,8 @@ public class Person {
 //        System.out.println(p1.name);
         Person p2 = new Person("Tex");
         Person p3 = new Person("Mabel");
-//        p2.sayHello();
+        p2.setName("tex");
+        p2.sayHello();
 //        p3.sayHello();
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
