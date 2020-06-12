@@ -16,12 +16,12 @@ public class Person {
     }
 
     public static void main(String[] args) {
-        Person p1 = new Person("Kali");
+//        Person p1 = new Person("Kali");
 //        System.out.println(p1.name);
-        Person p2 = new Person("Tex");
-        Person p3 = new Person("Mabel");
-        p2.setName("tex");
-        p2.sayHello();
+//        Person p2 = new Person("Tex");
+//        Person p3 = new Person("Mabel");
+//        p2.setName("tex");
+//        p2.sayHello();
 //        p3.sayHello();
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
