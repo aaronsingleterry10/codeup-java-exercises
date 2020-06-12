@@ -5,20 +5,29 @@ import java.util.Scanner;
 public class InputTest {
     public static void main(String[] args) {
         Input in = new Input();
-        System.out.println("Will you continue? y/n");
-        boolean yesNo = in.yesNo();
-        System.out.println(yesNo);
+//        System.out.println("Enter in a sentence.");
+//        String userInput = in.getString();
+//        System.out.println(userInput);
+//
+//        System.out.println("Will you continue? y/n");
+//        boolean yesNo = in.yesNo();
+//        System.out.println(yesNo);
+//
+//        System.out.println("Enter a whole number between 1 and 10");
+//        int numInRange = in.getInt(1, 10);
+//        System.out.println(numInRange);
 
-        System.out.println("Please enter in a whole number");
-        int num = in.getInt();
-        System.out.println(num);
+//        System.out.println("Please enter in a whole number");
+//        int num = in.getInt();
+//        System.out.println(num);
 
-        System.out.println("Enter a whole number between 1 and 10");
-        boolean numInRange = in.getInt(1, 10);
-        do {
-        System.out.println("Out of range, try again");
+//        System.out.println("Enter a decimal number between .99 and 9.99");
+//        double dblNumInRange = in.getDouble(.99, 9.99);
+//        System.out.println(dblNumInRange);
 
-        } while (!numInRange);
-
+        System.out.println("Enter a decimal number");
+        double dblNum = in.getDouble();
+        System.out.println(dblNum);
     }
+
 }
