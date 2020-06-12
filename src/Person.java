@@ -1,5 +1,5 @@
 public class Person {
-    private String name = "Aaron";
+    private String name;
 
     public String getName() {
         return name;
