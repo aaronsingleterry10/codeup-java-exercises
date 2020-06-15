@@ -5,12 +5,26 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class MoviesApplication {
-//    public static Movie[] () {
-//
-//    }
+
+    public static String getMovieName(String input) {
+        String output = "";
+        for (Movie movie: MoviesArray.findAll()) {
+            if (movie.getCategory().equalsIgnoreCase(input)) {
+                output += movie.getName() + " - " + movie.getCategory() + "\n";
+            }
+        }
+        return output;
+    }
+    public static String getAllMovies() {
+        String output = "";
+        for (Movie movie: MoviesArray.findAll()) {
+            output += movie.getName() + " - " + movie.getCategory() + "\n";
+        }
+        return output;
+    }
     public static void main(String[] args) {
 
-
+        Input userInput = new Input();
         Scanner scanner = new Scanner(System.in);
 //        System.out.println("Hello, welcome to our Movies Application! Would you like to continue? y/n");
 //        String userInput = scanner.nextLine();
@@ -18,21 +32,49 @@ public class MoviesApplication {
 //            System.out.println("Great! What");
 //        }
 //        System.out.println(MoviesArray.findAll()[0].getCategory());
-        System.out.println("Choose genre");
-        String genreInput = scanner.nextLine();
-        for (Movie movie: MoviesArray.findAll()) {
-//            if (movie.getCategory().equalsIgnoreCase("drama")) {
-//                System.out.println(movie.getName() + "-" + movie.getCategory());
-//            } else if (movie.getCategory().equalsIgnoreCase("musical")) {
-//                System.out.println(movie.getName() + "-" + movie.getCategory());
-//            } else if (movie.getCategory().equalsIgnoreCase("scifi")) {
-//                System.out.println(movie.getName() + "-" + movie.getCategory());
+
+
+//        System.out.println(getMovieName(genreInput));
+//        for (int i = 0; i < MoviesArray.findAll().length; i++) {
+//            if (MoviesArray.findAll()[i].getCategory().equalsIgnoreCase(genreInput)) {
+//                System.out.println(MoviesArray.findAll()[i].getName() + "-" + MoviesArray.findAll()[i].getCategory());
 //            }
-            if (movie.getCategory().equalsIgnoreCase(genreInput)) {
-                System.out.println(movie.getName() + "-" + movie.getCategory());
+//        }
+        System.out.println("Welcome to our Movies Application! What would you like to do?");
+        System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+        String genreInput = userInput.getString();
+        do {
+            if (genreInput.equals("0")) {
+                System.out.println("Thanks for visiting!");
+                break;
+            } else if (genreInput.equals("1")) {
+                System.out.println(getAllMovies());
+                System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+                genreInput = userInput.getString();
+            } else if (genreInput.equals("2")) {
+                System.out.println(getMovieName("animated"));
+                System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+                genreInput = userInput.getString();
+            } else if (genreInput.equals("3")) {
+                System.out.println(getMovieName("drama"));
+                System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+                genreInput = userInput.getString();
+            } else if (genreInput.equals("4")) {
+                System.out.println(getMovieName("horror"));
+                System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+                genreInput = userInput.getString();
+            } else if (genreInput.equals("5")) {
+                System.out.println(getMovieName("scifi"));
+                System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+                genreInput = userInput.getString();
             } else {
-                System.out.println("Sorry, but we don't have any movies of that genre.");
+                System.out.println("Invalid response");
+                System.out.println("0 - exit\n" + "1 - view all movies\n" + "2 - view movies in the animated category\n" + "3 - view movies in the drama category\n" + "4 - view movies in the horror category\n" + "5 - view movies in the scifi category");
+                genreInput = userInput.getString();
+
             }
-        }
+
+        } while (genreInput.length() >= 0);
     }
+//    genreInput.equals("0") || genreInput.equals("1") || genreInput.equals("2") || genreInput.equals("3") || genreInput.equals("4") || genreInput.equals("5")
 }
