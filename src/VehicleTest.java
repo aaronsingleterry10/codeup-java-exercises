@@ -23,8 +23,16 @@ public class VehicleTest {
 //        System.out.println(jet1.getOperable());
 //        System.out.println(jet1.getPassengerCapacity());
 //        System.out.println(jet1.getPowerSource());
-        System.out.println(car1.toString());
         System.out.println("===========");
         System.out.println(jet1.toString());
+        System.out.println("===========");
+        car1.deployAirBag();
+        System.out.println("===========");
+        jet1.takeOff();
+        car1.setPassengerCapacity(5);
+        System.out.println("===========");
+        System.out.println(car1.toString());
+
+
     }
 }
