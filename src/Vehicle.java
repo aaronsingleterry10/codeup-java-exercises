@@ -24,6 +24,10 @@ public class Vehicle {
         this.powerSource = powerSource;
     }
 
+    public Vehicle() {
+
+    }
+
     public Vehicle(boolean isOperable, int passengerCapacity, String powerSource) {
         this.isOperable = isOperable;
         this.passengerCapacity = passengerCapacity;
