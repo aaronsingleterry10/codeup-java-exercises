@@ -33,4 +33,13 @@ public class Vehicle {
         this.passengerCapacity = passengerCapacity;
         this.powerSource = powerSource;
     }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "isOperable=" + isOperable +
+                ", passengerCapacity=" + passengerCapacity +
+                ", powerSource='" + powerSource + '\'' +
+                '}';
+    }
 }
