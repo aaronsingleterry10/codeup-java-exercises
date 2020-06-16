@@ -18,6 +18,10 @@ public class Car extends Vehicle {
         System.out.println("Deploying airbag...");
     }
 
+    public void turnOn() {
+        System.out.println("Cranking engine...");
+    }
+
     @Override
     public String toString() {
         return "Car {" +

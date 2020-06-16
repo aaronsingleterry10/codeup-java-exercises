@@ -34,6 +34,10 @@ public class Vehicle {
         this.powerSource = powerSource;
     }
 
+    public void turnOn() {
+        System.out.println("Cranking engine...");
+    }
+
     @Override
     public String toString() {
         return "Vehicle{" +

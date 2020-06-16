@@ -19,6 +19,10 @@ public class Jet extends Vehicle {
         this.maximumAltitude = maximumAltitude;
     }
 
+    public void turnOn() {
+        System.out.println("Igniting jet engines...");
+    }
+
     @Override
     public String toString() {
         return "Jet {" +
