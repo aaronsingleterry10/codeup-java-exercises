@@ -16,7 +16,7 @@ public class Piano extends MusicalInstrument implements Tunable, VolumeAdjustabl
     }
 
     public void startMusic() {
-        System.out.println("Playing Bettie and the Jets...");
+        System.out.println("Playing Bennie and the Jets...");
     }
 
     public void stopMusic() {

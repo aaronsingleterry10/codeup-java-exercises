@@ -5,6 +5,7 @@ abstract class MusicalInstrument implements Playable {
 //            ​
 //            ```MusicalInstrument``` should have a constructor that sets the value of a private string field of ```instrumentClassification``` (include getter and setter)
 //            ​
+
     private String instrumentClassification;
 
     public String getInstrumentClassification() {
@@ -13,6 +14,9 @@ abstract class MusicalInstrument implements Playable {
 
     public void setInstrumentClassification(String instrumentClassification) {
         this.instrumentClassification = instrumentClassification;
+    }
+
+    public MusicalInstrument() {
     }
 
     public MusicalInstrument(String instrumentClassification) {
