@@ -1,7 +1,18 @@
 public class Piano extends MusicalInstrument implements Tunable, VolumeAdjustable {
 
-    public Piano(String inst) {
+    private int numberOfKeys;
+
+    public Piano(String inst, int numberOfKeys) {
         super(inst);
+        this.numberOfKeys = numberOfKeys;
+    }
+
+    public int getNumberOfKeys() {
+        return this.numberOfKeys;
+    }
+
+    public void setNumberOfKeys(int numberOfKeys) {
+        this.numberOfKeys = numberOfKeys;
     }
 
     public void startMusic() {
