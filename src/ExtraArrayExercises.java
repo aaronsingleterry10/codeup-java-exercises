@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class ExtraArrayExercises {
 //    1. Create a command line grocery list maker
 //​
@@ -13,11 +12,24 @@ public class ExtraArrayExercises {
 //    category and alphabetized in each group​
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        GroceryItem[] groceryItems;
+        Scanner sc = new Scanner(System.in).useDelimiter("\n");
 
         System.out.println("Welcome to Grocery List Maker.\nHow many grocery items will you be entering?");
         int numItemsEntered = sc.nextInt();
-        System.out.println(numItemsEntered);
-        System.out.println("Please enter the name, quantity, and category of each grocery item.");
+//        System.out.println(numItemsEntered);
+        System.out.println("Please enter the name of grocery item:");
+        String nameOfGroceryItem = sc.next();
+        System.out.println("Please enter the quantity:");
+        int quantityOfItem = sc.nextInt();
+
+        System.out.println("Please enter the category of item");
+        String categoryOfItem = sc.next();
+        groceryItems = new GroceryItem[numItemsEntered];
+        System.out.println(nameOfGroceryItem);
+        System.out.println(quantityOfItem);
+        System.out.println(categoryOfItem);
+
+
     }
 }
