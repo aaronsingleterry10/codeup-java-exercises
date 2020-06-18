@@ -3,11 +3,13 @@ package grades;
 import util.Input;
 
 import java.util.HashMap;
+import java.util.Scanner;
 
 public class GradesApplication {
     public static void main(String[] args) {
         HashMap<String, Student> students = new HashMap<>();
         Input in = new Input();
+        Scanner sc = new Scanner(System.in);
         students.put("codesoldier", new Student("John"));
         students.put("hackerattacker", new Student("Steve"));
         students.put("syntaxwarrior", new Student("Cody"));
@@ -31,19 +33,19 @@ public class GradesApplication {
         String input;
         do {
             System.out.println("What student would you like to see more information on?");
-            input = in.getString();
+            input = sc.nextLine();
             if (students.containsKey(input)) {
                 System.out.println("Name: " + students.get(input).getName() + " - GitHub Username: " + input);
                 System.out.println("Current average: " + students.get(input).getGradeAverage());
                 System.out.println("Would you like to see another student? y/n");
-                input = in.getString();
+                input = sc.nextLine();
                 if (input.equalsIgnoreCase("n")) {
                     System.out.println("Goodbye!");
                 }
             } else {
                 System.out.println("Sorry, no student found with the GitHub username of " + "\"" + input + "\".");
                 System.out.println("Would you like to see another student? y/n");
-                input = in.getString();
+                input = sc.nextLine();
                 if (input.equalsIgnoreCase("n")) {
                     System.out.println("Goodbye!");
                 }
