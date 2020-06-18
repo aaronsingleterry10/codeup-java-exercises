@@ -24,10 +24,22 @@ public class Student {
         grades.add(studentGrade);
     }
 
+    public String getGrades() {
+        String newList = "";
+        for (Integer x : this.grades) {
+            if (this.grades.indexOf(x) != this.grades.size() - 1) {
+                newList += x + ", ";
+            } else {
+                newList += x;
+            }
+        }
+        return newList;
+    }
+
     public double getGradeAverage() {
         double gradesTotal = 0;
         int length = 0;
-        for(Integer x : this.grades) {
+        for (Integer x : this.grades) {
             gradesTotal = gradesTotal + x;
             length += 1;
         }
@@ -36,17 +48,19 @@ public class Student {
 
     public static void main(String[] args) {
         Student student1 = new Student("Aaron");
-        student1.addGrade(90);
-        student1.addGrade(95);
-        student1.addGrade(100);
-        System.out.println(student1.grades);
-        System.out.println(student1.getGradeAverage());
+//        student1.addGrade(90);
+//        student1.addGrade(95);
+//        student1.addGrade(100);
+//        System.out.println(student1.grades);
+//        System.out.println(student1.getGradeAverage());
 
         Student student2 = new Student("Kali");
         student2.addGrade(100);
         student2.addGrade(97);
         student2.addGrade(99);
-        System.out.println(student2.grades);
-        System.out.println(student2.getGradeAverage());
+//        System.out.println(student2.grades);
+//        System.out.println(student2.getGradeAverage());
+        System.out.println("Grades: " + student2.getGrades());
+
     }
 }

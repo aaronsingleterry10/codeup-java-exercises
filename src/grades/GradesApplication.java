@@ -36,6 +36,7 @@ public class GradesApplication {
             input = sc.nextLine();
             if (students.containsKey(input)) {
                 System.out.println("Name: " + students.get(input).getName() + " - GitHub Username: " + input);
+                System.out.println("Grades: " + students.get(input).getGrades());
                 System.out.println("Current average: " + students.get(input).getGradeAverage());
                 System.out.println("Would you like to see another student? y/n");
                 input = sc.nextLine();
