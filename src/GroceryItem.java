@@ -4,9 +4,9 @@ public class GroceryItem {
     private String category;
     private int quantity;
 
-    public GroceryItem(String name, String category, int quantity) {
-        this.name = name;
+    public GroceryItem(String category, String name, int quantity) {
         this.category = category;
+        this.name = name;
         this.quantity = quantity;
     }
 
