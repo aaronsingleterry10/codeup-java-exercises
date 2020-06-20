@@ -36,20 +36,4 @@ public class GroceryItem {
         this.quantity = quantity;
     }
 
-    public static String returnList (GroceryItem[] array) {
-        String[] newList = new String[array.length];
-        String list = "";
-        for (int i = 0; i < array.length; i++) {
-            newList[i] = "Category: " + array[i].getCategory() + ". Name of item: " + array[i].getName() + ". Quantity: " + array[i].getQuantity() + ". ";
-        }
-        Arrays.sort(newList);
-        for (int i = 0; i < newList.length; i++) {
-            if (i != newList.length - 1) {
-                list += newList[i] + "\n==================\n";
-            } else {
-                list += newList[i];
-            }
-        }
-        return list;
-    }
 }

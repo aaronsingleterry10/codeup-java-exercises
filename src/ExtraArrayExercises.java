@@ -13,17 +13,26 @@ public class ExtraArrayExercises {
 //    - once the user has entered all items, print out all items grouped by
 //    category and alphabetized in each group​
 
-    public static void main(String[] args) {
+    static String returnList (GroceryItem[] array) {
+        String[] newList = new String[array.length];
+        String list = "";
+        for (int i = 0; i < array.length; i++) {
+            newList[i] = "Category: " + array[i].getCategory() + ". Name of item: " + array[i].getName() + ". Quantity: " + array[i].getQuantity() + ". ";
+        }
+        Arrays.sort(newList);
+        for (int i = 0; i < newList.length; i++) {
+            if (i != newList.length - 1) {
+                list += newList[i] + "\n==================\n";
+            } else {
+                list += newList[i];
+            }
+        }
+        return list;
+    }
 
-        GroceryItem[] groceryItems;
-        String[] newGroceryList;
+    static void groceryListMaker(GroceryItem[] array, int numberOfItems) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Welcome to Grocery List Maker.\nHow many grocery items will you be entering?");
-        int numItemsEntered = sc.nextInt();
-        groceryItems = new GroceryItem[numItemsEntered];
-        newGroceryList = new String[numItemsEntered];
-        for (int i = 0; i < groceryItems.length; i++) {
-
+        for (int i = 0; i < array.length; i++) {
             System.out.println("Please enter the name of grocery item #" + (i + 1) + ":");
             String nameOfGroceryItem = sc.next();
 
@@ -32,10 +41,22 @@ public class ExtraArrayExercises {
 
             System.out.println("Please enter the category of item");
             String categoryOfItem = sc.next();
-            groceryItems[i] = new GroceryItem(categoryOfItem, nameOfGroceryItem, quantityOfItem);
-
+            array[i] = new GroceryItem(categoryOfItem, nameOfGroceryItem, quantityOfItem);
         }
-        System.out.println(GroceryItem.returnList(groceryItems));
+    }
 
+    public static void main(String[] args) {
+
+        GroceryItem[] groceryItems;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome to Grocery List Maker.\nHow many grocery items will you be entering?");
+        int numItemsEntered = sc.nextInt();
+        groceryItems = new GroceryItem[numItemsEntered];
+
+//      this method creates the grocery list
+        groceryListMaker(groceryItems, numItemsEntered);
+
+//      this method takes the grocery list and sorts the list alphabetically by category
+        System.out.println(returnList(groceryItems));
     }
 }
