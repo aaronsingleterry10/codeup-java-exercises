@@ -38,7 +38,8 @@ public class InputTest {
 //        System.out.println("Enter a decimal number between .99 and 9.99");
 //        double dbl = in.getDouble(.99, 9.99);
 //        System.out.println(dbl);
-        System.out.println(in.getBinary());
+//        System.out.println(in.getBinary());
+        System.out.println(in.getHex());
     }
 
 }

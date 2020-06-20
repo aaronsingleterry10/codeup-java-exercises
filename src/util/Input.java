@@ -8,10 +8,12 @@ public class Input {
     public Input() {
         this.scanner = new Scanner(System.in).useDelimiter("\n");
     }
+
     public String getString() {
         String input = scanner.nextLine();
         return input;
     }
+
     public boolean yesNo() {
         String input = scanner.next();
         if (input.equals("y")) {
@@ -69,8 +71,17 @@ public class Input {
         try {
             return Integer.valueOf(this.getString(), 2);
         } catch (NumberFormatException e) {
-            System.out.println("Invalid. Enter a binary number.");
+            System.out.println("Invalid input. Enter a binary number.");
             return getBinary();
+        }
+    }
+
+    public int getHex() {
+        try {
+            return Integer.valueOf(this.getString(), 16);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid input. Enter a hexadecimal number");
+            return getHex();
         }
     }
 
