@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class GroceryItem {
-//    GroceryItem[] groceryItems;
+
     private String name;
     private String category;
     private int quantity;
