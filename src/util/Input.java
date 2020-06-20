@@ -65,6 +65,15 @@ public class Input {
         }
     }
 
+    public int getBinary() {
+        try {
+            return Integer.valueOf(this.getString(), 2);
+        } catch (NumberFormatException e) {
+            System.out.println("Invalid. Enter a binary number.");
+            return getBinary();
+        }
+    }
+
 //    public static void main(String[] args) {
 //        Input in = new Input();
 //        System.out.println("Will you continue? y/n");
