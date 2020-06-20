@@ -33,24 +33,36 @@ public class Input {
     }
 
     public int getInt() {
-        int num = scanner.nextInt();
-        return num;
+        try {
+            return Integer.valueOf(this.getString());
+        } catch (Exception e) {
+            System.out.println("Something went wrong, try again");
+            return getInt();
+        }
     }
 
     public double getDouble(double min, double max) {
-        double num = scanner.nextDouble();
-        if (num >= min && num <= max) {
-            return num;
-        } else {
-            System.out.println("Invalid number. Enter a decimal number between .99 and 9.99");
-            scanner.nextLine();
+        try {
+            double num = Double.valueOf(this.getString());
+            if (num >= min && num <= max) {
+                return num;
+            } else {
+                System.out.println("Invalid number. Enter a decimal number between .99 and 9.99");
+                return getDouble(min, max);
+            }
+        } catch (Exception e) {
+            System.out.println("Invalid. Try again.");
             return getDouble(min, max);
         }
     }
 
     public double getDouble() {
-        double num = scanner.nextDouble();
-        return num;
+        try {
+            return Double.valueOf(this.getString());
+        } catch (Exception e) {
+            System.out.println("Invalid input, try again.");
+            return getDouble();
+        }
     }
 
 //    public static void main(String[] args) {

@@ -25,9 +25,19 @@ public class InputTest {
 //        double dblNumInRange = in.getDouble(.99, 9.99);
 //        System.out.println(dblNumInRange);
 
-        System.out.println("Enter a decimal number");
-        double dblNum = in.getDouble();
-        System.out.println(dblNum);
+//        System.out.println("Enter a decimal number");
+//        double dblNum = in.getDouble();
+//        System.out.println(dblNum);
+//        System.out.println("Enter integer:");
+//        int input = in.getInt();
+//        System.out.println(input);
+//
+//        System.out.println("Enter decimal number:");
+//        double dbl = in.getDouble();
+//        System.out.println(dbl);
+        System.out.println("Enter a decimal number between .99 and 9.99");
+        double dbl = in.getDouble(.99, 9.99);
+        System.out.println(dbl);
     }
 
 }
