@@ -2,6 +2,9 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
+import java.util.Arrays;
+import java.util.List;
 
 public class FilesIOLec {
     public static void main(String[] args) throws IOException{
@@ -39,5 +42,10 @@ public class FilesIOLec {
             Files.createFile(myFile);
         }
 
+        List<String> names = Files.readAllLines(myFile);
+        List<String> addNames = Arrays.asList("Oreo");
+//        Files.write(myFile, addNames, StandardOpenOption.APPEND);
+//        names = Files.readAllLines(myFile);
+        System.out.println(names);
     }
 }
