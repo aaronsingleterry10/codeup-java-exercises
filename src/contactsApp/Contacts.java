@@ -10,6 +10,7 @@ public class Contacts {
     private String firstName;
     private String lastName;
     private long number;
+//    public static List<Contacts> newList = new ArrayList<>();
 
     public Contacts(String firstName, String lastName, long number) {
         this.firstName = firstName;
@@ -56,13 +57,14 @@ public class Contacts {
     public static String searchByName(List<Contacts> array, String name) {
         String output = "";
         for (Contacts contact : array) {
-            if (contact.getFirstName().equalsIgnoreCase(name)) {
+            if (contact.getFirstName().equalsIgnoreCase(name) || contact.getLastName().equalsIgnoreCase(name)) {
                 output += contact.getFirstName() + " " + contact.getLastName() + " " + contact.getNumber();
             }
         }
         return output;
     }
 
+//  This method writes to contacts.txt
     public static void updateContactsToList(List<Contacts> array, Path file) throws IOException {
         List<String> contacts = new ArrayList<>();
         for (Contacts person : array) {
@@ -73,7 +75,7 @@ public class Contacts {
 
     public static void removeContactFromList(List<Contacts> array, String name) {
         for (Contacts contact : array) {
-            if (contact.getFirstName().equalsIgnoreCase(name)) {
+            if (contact.getFirstName().equalsIgnoreCase(name) || contact.getLastName().equalsIgnoreCase(name)) {
                 array.remove(contact);
             }
         }
