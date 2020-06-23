@@ -21,25 +21,18 @@ public class ContactManager {
         Path myContactList = Paths.get("src","contactsApp", "contacts");
 
 //        listOfContacts(newList);
-        for (Contacts person : newList) {
-            System.out.println(person.getFirstName() + " " + person.getLastName() + " " + person.getNumber());
-        }
+//        for (Contacts person : newList) {
+//            System.out.println(person.getFirstName() + " " + person.getLastName() + " " + person.getNumber());
+//        }
 
-        addContactsToList(newList, myContactList);
+//        addContactsToList(newList, myContactList);
+        Contacts.addNewContactToList(newList, "Fred", "Flintstone", 7778907);
+        Contacts.addContactsToList(newList, myContactList);
 
-    }
-    public static void listOfContacts (List<Contacts> array) {
-        System.out.println("Name  |  Phone Number\n---------------------");
-        for (Contacts contact : array) {
-            System.out.println(contact.getFirstName() + " " + contact.getLastName() + " | " + contact.getNumber() + " |");
-        }
-    }
+        System.out.println(Contacts.searchByName(newList, "Bugs"));
+        System.out.println(Contacts.searchByName(newList, "Fred"));
+        System.out.println(Contacts.searchByName(newList, "Betty"));
+        System.out.println(Contacts.searchByName(newList, "Ed"));
 
-    public static void addContactsToList(List<Contacts> array, Path file) throws IOException {
-        List<String> contacts = new ArrayList<>();
-        for (Contacts person : array) {
-            contacts.add(person.getFirstName() + " " + person.getLastName() + " " + person.getNumber());
-        }
-        Files.write(file, contacts);
     }
 }
