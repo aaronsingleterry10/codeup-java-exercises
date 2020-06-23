@@ -63,11 +63,19 @@ public class Contacts {
         return output;
     }
 
-    public static void addContactsToList(List<Contacts> array, Path file) throws IOException {
+    public static void updateContactsToList(List<Contacts> array, Path file) throws IOException {
         List<String> contacts = new ArrayList<>();
         for (Contacts person : array) {
             contacts.add(person.getFirstName() + " " + person.getLastName() + " " + person.getNumber());
         }
         Files.write(file, contacts);
+    }
+
+    public static void removeContactFromList(List<Contacts> array, String name) {
+        for (Contacts contact : array) {
+            if (contact.getFirstName().equalsIgnoreCase(name)) {
+                array.remove(contact);
+            }
+        }
     }
 }
