@@ -42,13 +42,6 @@ public class Contacts {
         this.number = number;
     }
 
-    public static void listOfContacts (List<Contacts> array) {
-        System.out.println("Name  |  Phone Number\n---------------------");
-        for (Contacts contact : array) {
-            System.out.println(contact.getFirstName() + " " + contact.getLastName() + " | " + contact.getNumber() + " |");
-        }
-    }
-
     public static void addNewContactToList(List<Contacts> array, String firstName, String lastName, long phoneNumber) {
         Contacts newPerson = new Contacts(firstName, lastName, phoneNumber);
         array.add(newPerson);

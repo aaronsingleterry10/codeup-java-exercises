@@ -8,63 +8,86 @@ import java.util.*;
 
 public class ContactManager {
     public static void main(String[] args) throws IOException {
-        List<Contacts> newList = new ArrayList<>();
+//        List<Contacts> newList = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         Path myContactList = Paths.get("src", "contactsApp", "contacts");
+        List<String> myContacts = Files.readAllLines(myContactList);
+//        System.out.println(myContacts);
 
-        Contacts person1 = new Contacts("Betty", "Boop", 2345678);
-        Contacts person2 = new Contacts("Bugs", "Bunny", 1231234);
-        Contacts person3 = new Contacts("Jane", "Doe", 3214321);
-//        newList.add(person1);
-//        newList.add(person2);
-//        newList.add(person3);
+        List<String> updatedList = new ArrayList<>();
+        for (String contact : myContacts) {
+            System.out.println(contact.split(" ")[1]);
+        }
+//        for (int i = 0; i <myContacts.size(); i++) {
+//            System.out.println(Arrays.toString(myContacts.get(i).split(" ")));
+//        }
+//        System.out.println(updatedList);
+//        Contacts person1 = new Contacts("Betty", "Boop", 2345678);
+//        Contacts person2 = new Contacts("Bugs", "Bunny", 1231234);
+//        Contacts person3 = new Contacts("Jane", "Doe", 3214321);
+////        newList.add(person1);
+////        newList.add(person2);
+////        newList.add(person3);
 
-//        Contacts.addNewContactToList(newList, "Fred", "Flintstone", 7778907);
-
+////        Contacts.addNewContactToList(newList, "Fred", "Flintstone", 7778907);
+//
         System.out.println("Welcome to the Contact Manager App!");
-//        Contacts.addNewContactToList(newList, "craig", "williams", 2344321);
+////        Contacts.addNewContactToList(newList, "craig", "williams", 2344321);
+////        Contacts.updateContactsToList(newList, myContactList);
+////        for(Contacts person : newList) {
+////            System.out.println(person.getFirstName());
+////        }
+//        String yesNo = "";
+//        do {
+//            System.out.println("1. View contacts.\n" +
+//                    "2. Add a new contact.\n" +
+//                    "3. Search a contact by name.\n" +
+//                    "4. Delete an existing contact.\n" +
+//                    "5. Exit.\n" +
+//                    "Enter an option (1, 2, 3, 4 or 5):");
+//            int userInput = sc.nextInt();
+//            switch (userInput) {
+//                case 1:
+////                    Contacts.updateContactsToList(newList, myContactList);
+//                    listOfContacts(newList);
+//                    System.out.println("Would you like to continue? y/n");
+//                    yesNo = sc.next();
+//                    if (yesNo.equalsIgnoreCase("n")) {
+//                        System.out.println("Goodbye!");
+////                        Contacts.updateContactsToList(newList, myContactList);
+////                        System.exit(0);
+//                    }
+//                    break;
+//                case 2:
+//                    System.out.println("Enter first name:");
+//                    String firstNameInput = sc.next();
+//                    System.out.println("Enter last name:");
+//                    String lastNameInput = sc.next();
+//                    System.out.println("Enter phone number");
+//                    int phone = sc.nextInt();
+//                    Contacts.addNewContactToList(newList, firstNameInput, lastNameInput, phone);
+//                    Contacts.updateContactsToList(newList, myContactList);
+//                    System.out.println("Contacts has been updated. Would you like to continue? y/n");
+//                    yesNo = sc.next();
+//                    break;
+//                case 5:
+//                    System.out.println("Goodbye!");
+//                    Contacts.updateContactsToList(newList, myContactList);
+//                    System.exit(0);
+//            }
+////            Contacts.updateContactsToList(newList, myContactList);
+//        } while (yesNo.equalsIgnoreCase("y"));
 //        Contacts.updateContactsToList(newList, myContactList);
 //        for(Contacts person : newList) {
 //            System.out.println(person.getFirstName());
 //        }
-        String yesNo = "";
-        do {
-            System.out.println("1. View contacts.\n" +
-                    "2. Add a new contact.\n" +
-                    "3. Search a contact by name.\n" +
-                    "4. Delete an existing contact.\n" +
-                    "5. Exit.\n" +
-                    "Enter an option (1, 2, 3, 4 or 5):");
-            int userInput = sc.nextInt();
-            switch (userInput) {
-                case 1:
-                    Contacts.updateContactsToList(newList, myContactList);
-                    Contacts.listOfContacts(newList);
-                    System.out.println("Would you like to continue? y/n");
-                    yesNo = sc.next();
-                    if (yesNo.equalsIgnoreCase("n")) {
-                        System.out.println("Goodbye!");
-                    }
-                    break;
-                case 2:
-                    System.out.println("Enter first name:");
-                    String firstNameInput = sc.next();
-                    System.out.println("Enter last name:");
-                    String lastNameInput = sc.next();
-                    System.out.println("Enter phone number");
-                    int phone = sc.nextInt();
-                    Contacts.addNewContactToList(newList, firstNameInput, lastNameInput, phone);
-                    Contacts.updateContactsToList(newList, myContactList);
-                    System.out.println("Contacts has been updated. Would you like to continue? y/n");
-                    yesNo = sc.next();
-                    break;
-            }
-//            Contacts.updateContactsToList(newList, myContactList);
-        } while (yesNo.equalsIgnoreCase("y"));
-//        Contacts.updateContactsToList(newList, myContactList);
-//        for(Contacts person : newList) {
-//            System.out.println(person.getFirstName());
-//        }
+    }
+
+    public static void listOfContacts (List<Contacts> array) {
+        System.out.println("Name  |  Phone Number\n---------------------");
+        for (Contacts contact : array) {
+            System.out.println(contact.getFirstName() + " " + contact.getLastName() + " | " + contact.getNumber() + " |");
+        }
     }
 
 //    public static void viewAllContacts(Path file) throws IOException {
