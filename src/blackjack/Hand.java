@@ -1,4 +1,4 @@
 package blackjack;
 
-public class Hand {
+public class Hand extends Card {
 }
