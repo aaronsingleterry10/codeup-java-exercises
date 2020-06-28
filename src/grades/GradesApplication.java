@@ -45,7 +45,7 @@ public class GradesApplication {
         }
         String input;
         do {
-            System.out.println("What student would you like to see more information on? Or if you want to see everyone's grades, enter \"all\"");
+            System.out.println("What student would you like to see more information on? Or if you want to see everyone's grades, enter \"all\". One more thing, if you'd like to see the overall class grade average, enter \"average\"");
             input = sc.nextLine();
             if (students.containsKey(input)) {
                 System.out.println("Name: " + students.get(input).getName() + " - GitHub Username: " + input);
@@ -60,6 +60,19 @@ public class GradesApplication {
                 for (String x: students.keySet()) {
                     System.out.print("|" + x + "|" + " Grades: " + students.get(x).getGrades() + "\n");
                 }
+                System.out.println("Would you like to see another student? y/n");
+                input = sc.nextLine();
+                if (input.equalsIgnoreCase("n")) {
+                    System.out.println("Goodbye!");
+                }
+            } else if (input.equalsIgnoreCase("average")) {
+                double avg = 0;
+                int length = 0;
+                for (String x: students.keySet()) {
+                    avg += students.get(x).getGradeAverage();
+                    length += 1;
+                }
+                System.out.println(avg / length);
                 System.out.println("Would you like to see another student? y/n");
                 input = sc.nextLine();
                 if (input.equalsIgnoreCase("n")) {
