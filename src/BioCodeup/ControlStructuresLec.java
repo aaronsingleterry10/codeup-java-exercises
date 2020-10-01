@@ -20,10 +20,20 @@ public class ControlStructuresLec {
 //        }
 
         // Do While Loop
-        int j = 0;
-        do {
-            System.out.println(j);
-            j += 2;
-        } while (j <= 100);
+//        int j = 0;
+//        do {
+//            System.out.println(j);
+//            j += 2;
+//        } while (j <= 100);
+//        int k = 100;
+//        do {
+//            System.out.println(k);
+//            k -= 5;
+//        } while (k >= -10);
+//        long l = 2;
+//        do {
+//            System.out.println(l);
+//            l *= l;
+//        } while (l < 1000000);
     }
 }
