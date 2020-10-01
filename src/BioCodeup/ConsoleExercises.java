@@ -17,14 +17,16 @@ public class ConsoleExercises {
 //        String thirdWord = sc.nextLine();
 //        System.out.printf("You have entered \"%s\", \"%s\", and \"%s\"", firstWord, secondWord, thirdWord);
         System.out.println("Enter in the width of the room");
-        int width = Integer.parseInt(sc.nextLine());
+        sc.useDelimiter("\n");
+        double width = Double.parseDouble(sc.nextLine());
 
         System.out.println("Enter in the length of the room");
-        int length = Integer.parseInt(sc.nextLine());
+        sc.useDelimiter("\n");
+        double length = Double.parseDouble(sc.nextLine());
 
         System.out.println("The area of your room is: " + (width * length));
         System.out.println("The perimeter of your room is: " + ((width * 2) + (length * 2)));
-        System.out.printf("The area of your room is %d\n", (width * length));
-        System.out.printf("The perimeter of your room is: %d\n", ((width * 2) + (length * 2)));
+        System.out.printf("The area of your room is %.2f\n", (width * length));
+        System.out.printf("The perimeter of your room is: %.2f\n", ((width * 2) + (length * 2)));
     }
 }
