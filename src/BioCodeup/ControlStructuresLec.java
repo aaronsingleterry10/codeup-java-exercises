@@ -35,5 +35,15 @@ public class ControlStructuresLec {
 //            System.out.println(l);
 //            l *= l;
 //        } while (l < 1000000);
+
+        // For Loop
+
+//        for (int i = 5; i <= 15; i++) {
+//            System.out.print(i + " ");
+//        }
+
+        for (int i = 0; i <= 100; i += 2) {
+            System.out.println(i);
+        }
     }
 }
