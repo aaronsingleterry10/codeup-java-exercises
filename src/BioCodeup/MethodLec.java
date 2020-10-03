@@ -6,6 +6,7 @@ public class MethodLec {
         System.out.println("43 - 12 = " + subtract(43, 12));
         System.out.println("20 X 10 = " + multiply(20, 10));
         System.out.println("30 / 5 = " + division(30, 5));
+        System.out.println("6 / 0 = " + division(6, 0));
     }
 
     public static String sayHello(String name) {
